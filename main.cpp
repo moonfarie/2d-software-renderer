@@ -1,13 +1,8 @@
-#include <GL/freeglut.h>
-
-#include "window.hpp"
+#include "app.hpp"
 
 int main(int argc, char* argv[]) {
-  glutInit(&argc, argv);
-
-  platform::Window window{800, 600, "2D Software Renderer"};
-
-  glutMainLoop();
+  App app{argc, argv};
+  app.run();
 
   return 0;
 }
