@@ -9,6 +9,9 @@ class Window {
   Window(int width, int height, const std::string& title);
   ~Window();
 
+  int width() const;
+  int height() const;
+
  private:
   static void on_resize();
 

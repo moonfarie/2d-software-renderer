@@ -18,6 +18,10 @@ Window::Window(int width, int height, const std::string& title)
 
 Window::~Window() { glutDestroyWindow(id_); }
 
+int Window::width() const { return width_; }
+
+int Window::height() const { return height_; }
+
 void Window::on_resize() {
   //
 }
