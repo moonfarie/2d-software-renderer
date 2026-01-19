@@ -1,4 +1,4 @@
-CFLAGS = -std=c++23
+CFLAGS = -std=c++23 -Wall -Wextra -Wpedantic
 LDFLAGS = -lglut
 
 renderer: *.cpp *.hpp
