@@ -3,6 +3,8 @@
 #include <GL/freeglut.h>
 
 App::App(int argc, char* argv[])
-    : glut_(argc, argv), framebuffer_(window_.width(), window_.height(), 4) {}
+    : glut_(argc, argv),
+      display_(GLUT_RGBA | GLUT_SINGLE),
+      framebuffer_(window_.width(), window_.height(), 4) {}
 
 void App::run() const { glutMainLoop(); }

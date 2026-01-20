@@ -6,7 +6,7 @@ namespace platform {
 
 class Display {
  public:
-  Display();
+  Display(uint32_t mode);
   ~Display() = default;
 
  private:

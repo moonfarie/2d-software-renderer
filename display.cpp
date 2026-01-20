@@ -4,9 +4,6 @@
 
 namespace platform {
 
-Display::Display() {
-  mode_ = GLUT_RGBA | GLUT_SINGLE;
-  glutInitDisplayMode(mode_);
-}
+Display::Display(uint32_t mode) : mode_(mode) { glutInitDisplayMode(mode_); }
 
 }  // namespace platform
