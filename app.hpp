@@ -1,8 +1,11 @@
 #pragma once
 
+#include <cstddef>
+
 #include "display.hpp"
 #include "framebuffer.hpp"
 #include "glut.hpp"
+#include "renderer.hpp"
 #include "window.hpp"
 
 class App {
@@ -14,7 +17,8 @@ class App {
 
  private:
   platform::GLUT glut_;
-  platform::Window window_{800, 600, "2D Software Renderer"};
+  platform::Window window_;
   platform::Display display_;
-  render::Framebuffer framebuffer_;
+  render::Framebuffer<std::byte> framebuffer_;
+  render::Renderer renderer_;
 };

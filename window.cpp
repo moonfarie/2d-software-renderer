@@ -13,7 +13,6 @@ Window::Window(int width, int height, const std::string& title)
   if (id_ == 0) {
     throw std::runtime_error("Failed to create GLUT window");
   }
-  glutDisplayFunc(&on_resize);
 }
 
 Window::~Window() { glutDestroyWindow(id_); }
