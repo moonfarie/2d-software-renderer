@@ -8,7 +8,7 @@ App::App(int argc, char* argv[])
       window_(800, 600, "2D Software Renderer"),
       display_(GLUT_RGBA | GLUT_SINGLE, GL_RGBA, GL_UNSIGNED_BYTE),
       framebuffer_(window_.width(), window_.height()),
-      renderer_() {
+      renderer_(framebuffer_) {
   display_.set_framebuffer_view(framebuffer_.width(), framebuffer_.height(), framebuffer_.data());
 }
 

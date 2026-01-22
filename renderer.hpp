@@ -2,10 +2,15 @@
 
 namespace render {
 
+class Framebuffer;
+
 class Renderer {
  public:
-  Renderer() = default;
+  Renderer(Framebuffer& framebuffer);
   ~Renderer() = default;
+
+ private:
+  Framebuffer& framebuffer_;
 };
 
 }  // namespace render

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cstddef>
-
 #include "display.hpp"
 #include "framebuffer.hpp"
 #include "glut.hpp"
@@ -19,6 +17,6 @@ class App {
   platform::GLUT glut_;
   platform::Window window_;
   platform::Display display_;
-  render::Framebuffer<std::byte> framebuffer_;
+  render::Framebuffer framebuffer_;
   render::Renderer renderer_;
 };
