@@ -9,7 +9,12 @@ class Renderer {
   Renderer(Framebuffer& framebuffer);
   ~Renderer() = default;
 
+  void draw_pixel(int x, int y) const;
+
  private:
+  int x_pos(int x) const;
+  int row(int y) const;
+
   Framebuffer& framebuffer_;
 };
 

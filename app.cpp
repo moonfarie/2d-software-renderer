@@ -12,4 +12,7 @@ App::App(int argc, char* argv[])
   display_.set_framebuffer_view(framebuffer_.width(), framebuffer_.height(), framebuffer_.data());
 }
 
-void App::run() const { glutMainLoop(); }
+void App::run() const {
+  renderer_.draw_pixel(framebuffer_.width() / 2, framebuffer_.height() / 2);
+  glutMainLoop();
+}
