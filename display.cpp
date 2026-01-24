@@ -15,7 +15,7 @@ Display::Display(uint32_t glut_mode, uint32_t gl_format, uint32_t gl_type)
 void Display::set_framebuffer_view(int width, int height, const void* framebuffer) {
   width_ = width;
   height_ = height;
-  framebuffer_ = framebuffer;
+  pixels_ = framebuffer;
 }
 
 void Display::display_cb() {
@@ -28,7 +28,7 @@ void Display::display_cb() {
 void Display::draw_frame() const {
   glDrawPixels(static_cast<GLsizei>(width_), static_cast<GLsizei>(height_),
                static_cast<GLenum>(gl_format_), static_cast<GLenum>(gl_type_),
-               static_cast<const GLvoid*>(framebuffer_));
+               static_cast<const GLvoid*>(pixels_));
   glFlush();
 }
 

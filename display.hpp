@@ -23,7 +23,7 @@ class Display {
   uint32_t gl_type_{0x00000000};
   int width_{0};
   int height_{0};
-  const void* framebuffer_{nullptr};
+  const void* pixels_{nullptr};
 };
 
 }  // namespace platform
