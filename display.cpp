@@ -12,10 +12,10 @@ Display::Display(uint32_t glut_mode, uint32_t gl_format, uint32_t gl_type)
   glutSetWindowData(this);
 }
 
-void Display::set_framebuffer_view(int width, int height, const void* framebuffer) {
+void Display::set_pixels_view(int width, int height, const void* pixels) {
   width_ = width;
   height_ = height;
-  pixels_ = framebuffer;
+  pixels_ = pixels;
 }
 
 void Display::display_cb() {

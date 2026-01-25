@@ -12,7 +12,7 @@ class Display {
   Display(const Display&) = delete;
   Display& operator=(const Display&) = delete;
 
-  void set_framebuffer_view(int width, int height, const void* framebuffer);
+  void set_pixels_view(int width, int height, const void* pixels);
 
  private:
   static void display_cb();

@@ -9,7 +9,7 @@ App::App(int argc, char* argv[])
       display_(GLUT_RGBA | GLUT_SINGLE, GL_RGBA, GL_UNSIGNED_BYTE),
       framebuffer_(window_.width(), window_.height()),
       renderer_(framebuffer_) {
-  display_.set_framebuffer_view(framebuffer_.width(), framebuffer_.height(), framebuffer_.data());
+  display_.set_pixels_view(framebuffer_.width(), framebuffer_.height(), framebuffer_.data());
 }
 
 void App::run() const {
