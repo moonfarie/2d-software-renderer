@@ -26,6 +26,9 @@ void Display::display_cb() {
 }
 
 void Display::draw_frame() const {
+  if (pixels_ == nullptr) {
+    return;
+  }
   glDrawPixels(static_cast<GLsizei>(width_), static_cast<GLsizei>(height_),
                static_cast<GLenum>(gl_format_), static_cast<GLenum>(gl_type_),
                static_cast<const GLvoid*>(pixels_));
