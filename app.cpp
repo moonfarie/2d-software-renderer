@@ -13,6 +13,11 @@ App::App(int argc, char* argv[])
 }
 
 void App::run() const {
-  renderer_.draw_pixel(framebuffer_.width() / 2, framebuffer_.height() / 2);
-  glutMainLoop();
+  while (true) {
+    glutMainLoopEvent();
+
+    renderer_.draw_pixel(framebuffer_.width() / 2, framebuffer_.height() / 2);
+
+    glutPostRedisplay();
+  }
 }
