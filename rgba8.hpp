@@ -4,7 +4,7 @@
 
 namespace render {
 
-struct RGBA {
+struct RGBA8 {
   uint8_t R = 0;
   uint8_t G = 0;
   uint8_t B = 0;
