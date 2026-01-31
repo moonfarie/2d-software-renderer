@@ -16,7 +16,8 @@ void App::run() const {
   while (true) {
     glutMainLoopEvent();
 
-    renderer_.draw_pixel(framebuffer_.width() / 2, framebuffer_.height() / 2);
+    renderer_.draw_pixel(framebuffer_.width() / 2, framebuffer_.height() / 2,
+                         render::RGBA8{.R = 255, .G = 255, .B = 255, .A = 255});
 
     glutPostRedisplay();
   }
